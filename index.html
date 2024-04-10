@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/6d664e133f.js" crossorigin="anonymous"></script>
+    <title>My ToDo</title>
+</head>
+<body>
+    <header>
+        <h1>My ToDo</h1>
+        <button class="add-new-task" id="add-new-task"><i class="fa-solid fa-plus"></i></button>
+    </header>
+    <main>
+        <dialog data-modal>
+            <div class="form-container">
+                <h2>Add new task</h2>
+                <button class="close-form" id="close-form"><i class="fa-solid fa-xmark"></i></button>
+                <form>
+                    <label for="task-title">Task title:</label>
+                    <input type="text" id="task-title">
+                    <label for="task-description">Description:</label>
+                    <textarea name="description-text" id="task-description" cols="30" rows="10"></textarea>
+                    <label>Priority:</label>
+                    <div class="priority-container">
+                        <button class="hight-priority" id="hight-priority" value="#f34a4a" onclick="getColorFromFormBtns(this.value)"></button>
+                        <button class="medium-priority" id="medium-priority" value="#f9b12c" onclick="getColorFromFormBtns(this.value)"></button>
+                        <button class="low-priority" id="low-priority" value="#0cc10c" onclick="getColorFromFormBtns(this.value)"></button>
+                    </div>
+                    <button class="add-task" id="add-task">Add task</button>
+                </form>
+            </div>
+        </dialog>
+        <div class="content-container" id="content-container">
+            <!-- <div class="task-box">
+                <div class="top-field">
+                    <h3 class="title">Umyť riad</h3>
+                    <button class="delete-task"><i class="fa-solid fa-xmark"></i></button>
+                </div>
+                <p class="description">Nezabudnúť umyť riad</p>
+                <div class="bottom-field">
+                    <div class="priority-buttons">
+                        <button class="hight-priority"></button>
+                        <button class="medium-priority"></button>
+                        <button class="low-priority"></button>
+                    </div>
+                    <div class="action-buttons">
+                        <button class="update-task"><i class="fa-solid fa-pencil"></i></button>
+                        <button class="confirm-task"><i class="fa-solid fa-check"></i></button>
+                    </div>
+                </div>
+            </div> -->
+        </div>    
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
