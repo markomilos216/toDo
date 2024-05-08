@@ -90,7 +90,9 @@ let updateTask = (item) => {
     currentTask = allTasks[taskIndex];
     taskTitleInput.value = currentTask.title;
     taskDescriptionInput.value = currentTask.description;
+    colorFromFormBtns = currentTask.color;
     addTaskFormBtn.textContent = 'Update task';  
+    console.log(currentTask);
 }
 
 let setTaskColor = (button) => {
